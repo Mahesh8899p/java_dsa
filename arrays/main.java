@@ -1,4 +1,7 @@
 package arrays;
+
+import java.util.Arrays;
+import java.util.Scanner;
 public class main{
     public static void main(String[] args) {
         //syntax of the arrays
@@ -39,9 +42,36 @@ public class main{
     //int[]ros; by default the value of this will be null only\
     int[]array = new int[10];
     array[0] = 1;
-
+    array[1] = 2;
+    array[2] = 3;
+    array[3] = 4;
+    array[4] = 5;
+    array[5] = 6;
+    array[6] = 7;
+    array[7] = 8;
+    array[8] = 9;
+    array[9] = 10;
+    //iterating an array
+    for(int i = 0; i < array.length; i++){
+        System.out.println(array[i]);
     }
-    
+    //another way of iterating the array
+    for(int num : array){
+        System.out.println(num);
+    }
+    //another way to print the array
+    System.out.println(Arrays.toString(array));
 
-    
+    //array of objects
+    // str is a reference variable stored in the stack memory, which holds the address of the block created in heap memory
+    // new String[4] creates a block in the heap memory containing 4 slots (reference variables), all initialized to null
+    // each slot will point to a String object in the heap only after assignment (str[i] = in.next())
+    Scanner in = new Scanner(System.in);
+    String[] str = new String[4];
+    for(int i = 0; i < str.length; i++){
+        str[i] = in.next();
+    }
+    System.out.println(Arrays.toString(str));
+    in.close();
+    }
 }
